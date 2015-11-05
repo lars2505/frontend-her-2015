@@ -1,0 +1,212 @@
+
+/* ===========================================
+    STYLE FOR FORMPAGE
+   =========================================== */
+
+/* FORMULIER OPEN/SLUIT */
+.hidden{
+        display: none;
+    }
+    
+
+label {
+    display: block;
+    margin: 0 0 1em;
+}
+
+label > input {
+    display: block;
+}
+
+input[type="radio"] + label{
+    display: inline;
+}
+
+input, button {
+    font: inherit;
+}
+
+.visible {
+    display: block !important; /* overschrijven van andere code (dit als eerst) */ 
+}
+
+/* INTRO TEXT */
+.wrapper2 > main > h1 {
+    text-align: left;
+    font-size: 1.5em;
+    line-height: 1.4em;
+
+    margin-bottom: .4em;
+    margin-top: .4em;
+    margin-left: .4em;    
+}
+
+.wrapper2 > main > p {
+    text-align: left;
+    font-size: .875em;
+    line-height: 1.4em;
+
+    margin-bottom: .9em;
+    margin-left: .4em;
+}
+
+.wrapper2 > main > p > a {
+    font-weight: 600;
+    font-style: italic;
+
+    color: gold;
+}
+
+.wrapper2 > main > em {
+    display: block;
+    text-align: left;
+    font-size: .875em;
+    line-height: 1.4em;
+
+    margin-left: 2em;
+    margin-right: 2.5em;
+    margin-bottom: .9em;
+}
+
+/* FORM */
+form > fieldset {
+    margin: 2em 0;
+    border: none;
+}
+
+form > fieldset > legend {
+    margin: 0 2em .5em 0;
+    padding: .5em;
+    width: 100%;
+
+    background-color: gold;
+    font-weight: 700;
+    font-size: 1em;
+    color: black;
+}
+
+form > fieldset > label {
+    display: none;
+
+    font-weight: 400;
+    font-size: .875em;
+}
+
+form > fieldset > input {
+    margin-bottom: 1em;
+    padding: .3em;
+    width: 100%;
+
+    font-weight: 400;
+    font-size: .875em;
+}
+
+    /* Ik wil mij aanmelden.. */
+    form > fieldset > input#project, input#stage {
+        display: block;
+        float: left;
+        
+        margin-right: .5em;
+        padding: 0;
+
+        width: 1em;
+    }
+    
+    /* Tussen ruimte tussen beide keuzes.. */
+    form > fieldset > input#stage {
+        margin-left: 2em;
+    }
+    
+    /* Aanpassen regelhoogte.. */
+    form > fieldset > label:nth-of-type(8), label:nth-of-type(9) {
+        margin-top: -.15em;
+        float: left;
+    }
+
+    /* Hoe lang is de stage.. */
+    form > fieldset:nth-of-type(3) > input#tien, input#twintig {
+        display: block;
+        float: left;
+        
+        margin-bottom: -.1em;
+        margin-right: .5em;
+        padding: 0;
+
+        width: 1em;
+    }
+    
+    /* Tussen ruimte tussen beide keuzes.. */
+    form > fieldset > input#twintig {
+        margin-left: 2em;
+    }
+    
+    /* Aanpassen regelhoogte.. */
+    form > fieldset:nth-of-type(3) > label:nth-of-type(1), label:nth-of-type(2) {
+        margin-bottom: -.1em;
+        margin-top: -.15em;
+        float: left;
+    }
+
+form > fieldset > textarea {
+    margin-bottom: .5em;
+    padding: .3em;
+
+    height: 4em;
+    width: 100%;
+
+    font-weight: 400;
+    font-size: .875em;
+}
+
+    /* Opmerking fieldset 2.. */
+    form > fieldset:nth-of-type(2) > textarea:last-child {
+        margin-top: 2em;
+    }
+
+form > fieldset > select {
+    margin-top: -.3em;
+    width: 100%;
+}
+
+form > fieldset > p {
+    margin-bottom: .5em;
+    margin-top: .5em;
+
+    text-align: left;
+    
+    font-weight: 600;
+    font-size: .875em;
+}
+    
+    /* Download this PDF.. */
+    form > fieldset > p > a {
+        display: block;
+        width: 100%;
+
+        margin-bottom: -2em;
+        margin-top: 1.5em;
+        padding: .5em;
+
+        border: 0.15em solid gold;
+        text-decoration: none;
+        text-align: center;
+        
+        font-weight: 400;
+        font-size: .95em;
+        color: gold;
+    }
+
+form > #submit {
+    background-color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+
+    display: block;
+    padding: .5em;
+    width: 100%;
+    
+    font-weight: 400;
+    font-size: .875em;
+    color: gold;
+}

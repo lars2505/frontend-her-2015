@@ -1,0 +1,135 @@
+ <!DOCTYPE html>
+              
+            <html>
+            <head>
+            
+            
+                        <title>PHP insertion</title>
+
+<!-- this to connect to the css file -->
+            <link href="insert.css" rel="stylesheet">
+<style>
+    .hidden
+    {
+        display: none;
+    }
+    
+    
+</style>
+<script>
+            // function to show or hide input type field when clicked on radio button
+function showHide(hoi) {
+   var t1 = document.getElementById('project'),
+       t2 = document.getElementById('stage'),
+       t3 = document.getElementById('bedrijf');
+   switch (hoi) {
+    case 'telephone1':
+        project.style.display = 'block';
+        stage.style.display = 'none';
+        bedrijf.style.display= 'none';
+         break;
+    case 'telephone2':
+        project.style.display = 'none';
+        stage.style.display = 'block';
+        bedrijf.style.display = 'block'
+   }
+}
+</script>
+
+</head>
+            
+
+<body>
+                
+<form>
+   <label>Ik wil mij aanmelden voor</label>
+   <input type="radio" name="Telephone" value="telephone1" onclick="showHide(this.value)"/>
+   <label>Voor een project</label>
+     
+   <input type="radio" name="Telephone" value="telephone2" onclick="showHide(this.value)" />
+   <label>Als stagebedrijf</label>
+ 
+        <fieldset id="project" class="hidden">
+                        <legend>Project</legend>
+                        
+                        <label for="title">Titel</label>
+                        <input type="text" id="title" placeholder="Titel"/>
+
+                        <label for="opdracht">Opdrachtomschrijving</label>
+                        <textarea id="opdracht" placeholder="Opdrachtomschrijving"></textarea>
+
+                        <label for="name3">Doelgroepomschrijving</label>
+                        <textarea id="name3" placeholder="Doelgroepomschrijving"></textarea>
+
+                        <label for="name4">Doelstelling/intentie van het project</label>
+                        <textarea id="name4" placeholder="Doelstelling/intentie van het project"></textarea>
+                        
+                        <p>Looptijd (10 t/m 20 weken)</p>
+                        <label for="week">Looptijd (10 t/m 20 weken)</label>
+                        <input type="range" min="10" max="20" id="week">
+                        
+                        <p>Deadline</p>
+                        <label for="name5">Deadline</label>
+                        <input type="date" id="name5"/>
+                        
+                        <p>Geschikt voor</p>
+                        <label for="keuze2">Geschikt voor:</label>
+                            <select id="keuze2">
+                                <option value="eerstejaars studenten">eerstejaars studenten</option>
+                                <option value="tweedejaars studenten">tweedejaars studenten</option>
+                                <option value="derdejaars studenten">derdejaars studenten</option>
+                                <option value="afstudeer studenten">afstudeer studenten</option>
+                                <option value="onbekend">onbekend</option>
+                            </select>
+
+                        <label for="merking">Opmerking</label>
+                        <textarea id="merking" placeholder="Geef hier uw opmerking"></textarea>
+          </fieldset>
+ 
+
+  <fieldset id="stage" class="hidden">
+                        <legend>Stage</legend>
+                        
+                        <p>Hoe lang is de stage?</p>
+                        <input type="radio" id="tien" name="tien" value="tien">
+                        <label for="tien">10 weken</label>
+                        
+                        <input type="radio" id="twintig" name="twintig" value="twintig">
+                        <label for="twintig">20 weken</label> <br>
+                        
+                        <p>Begin datum</p>
+                        <label for="begindate">Begin datum</label>
+                        <input id="begindate" type="date"/>
+                        
+                        <label for="beschrijving">Beschrijving werkzaamheden</label>
+                        <textarea id="beschrijving" placeholder="Beschrijving stagewerkzaamheden"></textarea>
+
+                        <label for="opmerking">Opmerking</label>
+                            <textarea id="opmerking" placeholder="Geef hier uw opmerking"></textarea>
+                    </fieldset> <!-- Eind Stage Form -->
+
+                    <fieldset id="bedrijf" class="hidden"> <!-- Begin Stagebedrijf Form -->
+                        <legend>Beschrijving stagebedrijf</legend>
+
+                        <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                        <input type="text" id="bedrijfsnaam" placeholder="Bedrijfsnaam"/>
+
+                        <label for="adres">Adres</label>
+                        <input type="text" id="adres" placeholder="Adres"/>
+                        
+                        <label for="postcode">Postcode</label>
+                        <input type="text" id="postcode" placeholder="Postcode"/>
+
+                        <label for="plaats">Plaats</label>
+                        <input type="text" id="plaats" placeholder="Plaats"/>
+
+                        <label for="sector">Sector</label>
+                        <input type="text" id="sector" placeholder="Sector"/>
+
+                        <label for="core">Core Business</label>
+                        <textarea id="core" placeholder="Beschrijf hier uw core business"></textarea>
+                    </fieldset> <!-- Eind Stagebedrijf Form -->
+                    <input id="submit" type="submit" value="Verzend aanmelding">           
+    
+</body>
+</html>
